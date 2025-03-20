@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <TopHeader/>
+    <router-view/>
+  </div>
+</template>
+
+<script setup>
+import TopHeader from './components/header/TopHeader.vue';
+</script>
+
+<style scoped>
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+</style>

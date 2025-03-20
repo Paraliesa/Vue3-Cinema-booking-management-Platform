@@ -1,0 +1,30 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('register/', views.register, name='register'),
+    path('login/', views.login, name='login'),
+    path('cinemascontroller/', views.cinemascontroller, name='cinemascontroller'),
+    path('get_cinema/', views.get_cinema, name='get_cinema'),
+    path('get_halls/', views.get_halls, name='get_halls'),
+    path('get_hall_arrangement_today/', views.get_hall_arrangement_today, name='get_hall_arrangement_today'),
+    path('get_hall_seatmodel/', views.get_hall_seatmodel, name='get_hall_seatmodel'),
+    path('get_hall_details/', views.get_hall_details, name='get_hall_details'),
+    path('now-playing/', views.now_playing, name='now_playing'),
+    path('getmovies/', views.getmovies, name='getmovies'),
+    path('movie_details/', views.movie_details, name='movie_details'),
+    path('get_movie_halls/', views.get_movie_halls, name='get_movie_halls'),
+    path('purchase/', views.purchase, name='purchase'),
+    path('updateSeatLayout/', views.updateSeatLayout, name='updateSeatLayout'),
+    path('createOrder/', views.createOrder, name='createOrder'),
+    path('myorders/', views.myorders, name='myorders'),
+    path('adminorders/', views.adminorders, name='adminorders'),
+    path('admingetmovies/', views.admingetmovies, name='admingetmovies'),
+    path('adminsubmovie/', views.adminsubmovie, name='adminsubmovie'),
+    path('admindisablemovie/', views.admindisablemovie, name='admindisablemovie'),
+    path('admingetschedules/', views.admingetschedules, name='admingetschedules'),
+    path('adminsubschedule/', views.adminsubschedule, name='adminsubschedule'),
+    path('admindisableschedule/', views.admindisableschedule, name='admindisableschedule'),
+    path('admingetcinemas/', views.admingetcinemas, name='admingetcinemas'),
+    path('admindelcinema/', views.admindelcinema, name='admindelcinema'),
+]
