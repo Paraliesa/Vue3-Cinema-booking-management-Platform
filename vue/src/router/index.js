@@ -111,9 +111,9 @@ router.beforeEach((to, from, next)=>{
   console.log(to.name)
   // 如果目标路由是登录页或者注册页，则将 needHeader 设为 0
   if (to.name === 'LoginPage' || to.name === 'RegisterPage') {
-    store.setNeedHeader('0');
+    store.setNeedHeader(0);
   } else {
-    store.setNeedHeader('1');
+    store.setNeedHeader(1);
   }
 
   // 必须调用 next() 才能继续导航

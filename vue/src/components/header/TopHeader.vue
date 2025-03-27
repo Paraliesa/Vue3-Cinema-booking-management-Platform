@@ -1,5 +1,5 @@
 <template>
-  <div v-if="needHeader == '1'">
+  <div v-if="store.needHeader == 1">
     <header :class="[isTop ? 'header-top' : 'header-not-top', 'header']">
       <div class="logo" :class="{ 'small-logo': !isTop }"></div>
       <nav>
@@ -19,7 +19,7 @@
   </div>  
 </template>
   
-  <script>
+<script>
   import { ref, onMounted, watch, onBeforeUnmount } from 'vue';
   import { useRouter } from 'vue-router';
   import { useHeaderStore } from '../../stores/header';
@@ -33,13 +33,6 @@
       const username = ref(null);
       const router = useRouter();
       const isDropdownVisible = ref(false);
-      const needHeader = ref(store.needHeader);
-
-      watch(() => store.needHeader, (newValue, oldValue) => {
-        if (newValue !== oldValue) {
-          needHeader.value = newValue;
-        }
-      });
   
       const handleScroll = () => {
         headerColor.value = window.scrollY === 0 ? '#FEC979' : '#fff';
@@ -108,11 +101,11 @@
         goToHomePage,
         goToCinemas,
         goToMovies,
-        needHeader
+        store
       };
     }
   };
-  </script>
+</script>
   
   <style scoped>
   
